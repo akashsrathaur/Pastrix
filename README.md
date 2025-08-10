@@ -1,91 +1,89 @@
-PASTRIX Autotyper
-<!-- Replace with a URL to your screenshot -->
+# 🚀 Pastrix
 
-PASTRIX is a modern, highly configurable autotyper designed to simulate human typing. It is built with a sleek user interface using CustomTkinter and a powerful backend that works effectively in restricted environments where standard copy-pasting is disabled.
+> **Paste anywhere, even where it’s blocked** — Pastrix is a Python-based GUI tool that simulates keystrokes to bypass paste restrictions (perfect for ACE Editor and similar environments).
 
-✨ Features
-Modern User Interface: A clean, dark-themed UI with intuitive controls.
+---
 
-Multiple Typing Modes: Includes "Normal" mode for standard text fields and a specialized "Ace-editor" mode for code editors.
+## ✨ Features
+- 🖱 **Bypass paste restrictions** on websites & editors.
+- ⚙ **Two Modes**: Normal & ACE Editor.
+- ⌨ **Custom Shortcut Key** (default: Right Ctrl).
+- 📝 Options:
+  - Line break after each line.
+  - Remove everything before pasting.
+  - Remove auto-completion brackets.
+- 📦 Can be converted into a **standalone .exe** (no Python required).
 
-Customizable Hotkeys: Choose your preferred shortcut key to trigger the typing action.
+---
 
-Advanced Typing Options:
-
-Line Break: Automatically presses Enter after each line.
-
-Clear Field Before Pasting: Simulates Ctrl+A + Backspace to clear existing text.
-
-Remove Auto Brackets: Cleans up extra brackets that some editors add automatically.
-
-Standalone Software: Packaged as a .exe file that runs on Windows without needing Python or any libraries installed.
-
-🚀 How to Use (For Normal Users)
-No installation is needed. Just download the software and run it.
-
-Go to the Releases section of this repository.
-
-Under the latest release, download the PASTRIX.zip file.
-
-Unzip the downloaded file.
-
-Double-click PASTRIX.exe to run the application.
-
-Configure your desired settings in the app and press START.
-
-Click into any text field and press your chosen shortcut key to start typing.
-
-🛠️ Building from Source (For Developers)
-If you want to modify the code or build the software yourself, follow these steps.
-
-1. Setup the Environment
-First, clone the repository and install the required Python packages.
-
-# Clone the repository
-git clone [https://github.com/akashsrathaur/Pastrix.git](https://github.com/akashsrathaur/Pastrix.git)
-cd Pastrix
-
-# Install dependencies
+## 📦 Requirements
+Install dependencies:
+```bash
 pip install -r requirements.txt
+```
+**Dependencies:**
+- [`pynput`](https://pypi.org/project/pynput/)
+- [`pyperclip`](https://pypi.org/project/pyperclip/)
 
-2. Run the Application
-To run the application directly from the source code:
+---
 
-python main.py
+## 🚀 How to Run
+1. **Clone the repo**:
+   ```bash
+   git clone https://github.com/akashsrathaur/pastrix.git
+   cd pastrix
+   ```
+2. **Install dependencies**:
+   ```bash
+   pip install -r requirements.txt
+   ```
+3. **Run the GUI**:
+   ```bash
+   python main.py
+   ```
+4. **Usage**:
+   - Select mode, shortcut key, and options.
+   - Click **START**.
+   - Copy text and press your shortcut key to paste anywhere.
 
-3. Build the Executable
-To package the application into a standalone .exe file, use the following PyInstaller command. Make sure you have PyInstaller installed (pip install pyinstaller).
+---
 
-pyinstaller --noconsole --name "PASTRIX" --icon="assets/icon.ico" --add-data="assets;assets" main.py
-
-The final software will be located in the dist/PASTRIX folder.
-
-📂 Project Structure
-The source code is organized as follows:
-
-PASTRIX/
-├── assets/
-│   ├── github.png
+## 📂 Directory Structure
+```
+Pastrix/
+├── assets/                # Icons and images
 │   ├── icon.ico
-│   ├── instagram.png
-│   └── linkedin.png
+│   ├── icon.png
+│   ├── icon.py
+├── main.py                 # GUI entry point
+├── Pastrix.py              # Core paste logic
+├── requirements.txt        # Dependencies
+├── build.sh                # Build script (PyInstaller)
+├── README.md               # Documentation
 ├── .gitignore
-├── main.py
-├── Pastrix.py
-├── README.md
-└── requirements.txt
+```
 
-main.py: Contains the code for the CustomTkinter user interface.
+---
 
-Pastrix.py: The core backend logic for keyboard control and typing.
+## 🛠 Build to EXE
+To create a standalone `.exe`:
+```bash
+pip install pyinstaller
+pyinstaller --noconsole --onefile --icon=assets/icon.ico main.py
+```
+- Your `.exe` will be in the `dist` folder.
+- You can run it without Python installed.
 
-assets/: Contains all static images and icons used by the application.
+---
 
-requirements.txt: A list of all Python dependencies.
+## 👤 Author
 
-👤 Author & Contact
-Akash Singh Rathaur
+**Akash Singh Rathaur**  
 
-GitHub: @akashsrathaur
+[![Instagram](https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://www.instagram.com/akashsrathaur/)  
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/akashsrathaur/)  
+[![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/akashsrathaur)
 
-LinkedIn: [Akash Singh Rathaur](https://www.linkedin.
+---
+
+💡 *Feel free to fork, contribute, or open issues to improve Pastrix.*
