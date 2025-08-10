@@ -1,65 +1,91 @@
-# BDSMTyper
+PASTRIX Autotyper
+<!-- Replace with a URL to your screenshot -->
 
-BDSMTyper is a software tool that allows you to copy and paste text on websites where pasting is not allowed. Works perfectly on ACE Editor and supports pasting on any website using the right control key of the keyboard. BDSMTyper is a single executable file that can be run with just one click, without any installation.
+PASTRIX is a modern, highly configurable autotyper designed to simulate human typing. It is built with a sleek user interface using CustomTkinter and a powerful backend that works effectively in restricted environments where standard copy-pasting is disabled.
 
-## Features
+✨ Features
+Modern User Interface: A clean, dark-themed UI with intuitive controls.
 
--   Copy and paste text on websites where pasting is not allowed
--   Supports pasting on any website using the right control key of the keyboard
--   Works on ACE Editor which is widely used in web-based text editor
--   Single executable file that can be run with just one click, without any installation
--   Additional Features:
-    -  Line spacing after each line
-    -  Remove auto completion brackets
-    -  Purge before pasting
--   Open source and free to use
--   No installation required
--   No admin privileges required
+Multiple Typing Modes: Includes "Normal" mode for standard text fields and a specialized "Ace-editor" mode for code editors.
 
+Customizable Hotkeys: Choose your preferred shortcut key to trigger the typing action.
 
-## How to use
+Advanced Typing Options:
 
-1. Download the BDSMTyper executable file from the Releases section of this repository.
-2. Run the BDSMTyper executable file.
-3. In order to paste text on a website where pasting is not allowed, click on START button to activate the BDSMTyper editor.
-4. Copy the text you want to paste on the website to the clipboard.
-5. Click on the right control key of your keyboard to paste the copied text on the website.
+Line Break: Automatically presses Enter after each line.
 
-## Build
+Clear Field Before Pasting: Simulates Ctrl+A + Backspace to clear existing text.
 
-To build BDSMTyper from the source code, you will need to have PyInstaller installed. PyInstaller is a Python package that can be used to convert Python scripts into standalone executable files.
+Remove Auto Brackets: Cleans up extra brackets that some editors add automatically.
 
-To install PyInstaller, run the following command:
+Standalone Software: Packaged as a .exe file that runs on Windows without needing Python or any libraries installed.
 
-```
-pip install pyinstaller
-```
+🚀 How to Use (For Normal Users)
+No installation is needed. Just download the software and run it.
 
-Once PyInstaller is installed, you can use the build.sh script to build the BDSMTyper executable file. To do so, follow these steps:
+Go to the Releases section of this repository.
 
-1. Open a terminal window and navigate to the root directory of the BDSMTyper project.
-2. Run the following command to make the build.sh script executable:
+Under the latest release, download the PASTRIX.zip file.
 
-```
-chmod +x build.sh
-```
+Unzip the downloaded file.
 
-3. Run the build.sh script by executing the following command:
+Double-click PASTRIX.exe to run the application.
 
-```
-./build.sh
-```
+Configure your desired settings in the app and press START.
 
-4. The build process will start, and once it's complete, you'll find the BDSMTyper executable file in the `dist` directory.
+Click into any text field and press your chosen shortcut key to start typing.
 
-## License
+🛠️ Building from Source (For Developers)
+If you want to modify the code or build the software yourself, follow these steps.
 
-BDSMTyper is licensed under the GNU General Public License v3.0. See [LICENSE](LICENSE) for more information.
+1. Setup the Environment
+First, clone the repository and install the required Python packages.
 
-## Contributing
+# Clone the repository
+git clone [https://github.com/akashsrathaur/Pastrix.git](https://github.com/akashsrathaur/Pastrix.git)
+cd Pastrix
 
-Contributions to BDSMTyper are welcome! See [CONTRIBUTING.md](CONTRIBUTING.md) for more information on how to get started.
+# Install dependencies
+pip install -r requirements.txt
 
-## Contact
+2. Run the Application
+To run the application directly from the source code:
 
-If you have any questions or comments, please feel free to reach out to us at viperadnan@gmail.com.
+python main.py
+
+3. Build the Executable
+To package the application into a standalone .exe file, use the following PyInstaller command. Make sure you have PyInstaller installed (pip install pyinstaller).
+
+pyinstaller --noconsole --name "PASTRIX" --icon="assets/icon.ico" --add-data="assets;assets" main.py
+
+The final software will be located in the dist/PASTRIX folder.
+
+📂 Project Structure
+The source code is organized as follows:
+
+PASTRIX/
+├── assets/
+│   ├── github.png
+│   ├── icon.ico
+│   ├── instagram.png
+│   └── linkedin.png
+├── .gitignore
+├── main.py
+├── Pastrix.py
+├── README.md
+└── requirements.txt
+
+main.py: Contains the code for the CustomTkinter user interface.
+
+Pastrix.py: The core backend logic for keyboard control and typing.
+
+assets/: Contains all static images and icons used by the application.
+
+requirements.txt: A list of all Python dependencies.
+
+👤 Author & Contact
+Akash Singh Rathaur
+
+GitHub: @akashsrathaur
+
+LinkedIn: [Akash Singh Rathaur](https://www.linkedin.
