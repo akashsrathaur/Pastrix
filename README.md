@@ -91,3 +91,8 @@ pyinstaller --noconsole --onefile --icon=assets/icon.ico main.py
 ## License
 
 This project is open source and available under the MIT License.
+
+
+## Testing
+
+To run tests, use the built-in test suite included with the project.
