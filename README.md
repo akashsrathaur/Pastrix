@@ -87,3 +87,7 @@ pyinstaller --noconsole --onefile --icon=assets/icon.ico main.py
 ---
 
 💡 *Feel free to fork, contribute, or open issues to improve Pastrix.*
+
+## License
+
+This project is open source and available under the MIT License.
